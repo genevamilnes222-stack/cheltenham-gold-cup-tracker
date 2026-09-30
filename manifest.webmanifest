@@ -1,0 +1,12 @@
+{
+  "id": "./",
+  "name": "Gold Cup Intelligence — Cheltenham 2027",
+  "short_name": "Gold Cup",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07130e",
+  "theme_color": "#07130e",
+  "description": "Cheltenham Gold Cup tracker using free-access sources."
+}
