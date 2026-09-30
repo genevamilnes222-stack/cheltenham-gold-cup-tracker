@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07130e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gold Cup">
+  <meta name="format-detection" content="telephone=no">
+  <title>Gold Cup Intelligence</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-wrap">
+      <div class="app-mark" aria-hidden="true">GC</div>
+      <div>
+        <div class="eyebrow">CHELTENHAM 2027</div>
+        <h1>Gold Cup Intelligence</h1>
+        <p>Free-source race tracking • Friday 19 March 2027 • 16:00 GMT</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="install" class="secondary-btn" type="button">Install on iPhone</button>
+      <button id="refresh" type="button">Refresh sources</button>
+    </div>
+  </header>
+
+  <nav id="nav" aria-label="App sections"></nav>
+  <main id="app"></main>
+
+  <footer>Information dashboard only. Odds and terms change; verify with the bookmaker before betting. 18+ • GambleAware.</footer>
+
+  <dialog id="installDialog" class="install-dialog">
+    <div class="install-sheet">
+      <button id="closeInstall" class="close-btn" aria-label="Close install instructions">×</button>
+      <div class="app-mark large" aria-hidden="true">GC</div>
+      <div class="eyebrow">ADD TO IPHONE</div>
+      <h2>Install Gold Cup Intelligence</h2>
+      <ol>
+        <li>Open this app in <strong>Safari</strong>.</li>
+        <li>Tap the <strong>Share</strong> button.</li>
+        <li>Choose <strong>Add to Home Screen</strong>.</li>
+        <li>Turn on <strong>Open as Web App</strong>, then tap <strong>Add</strong>.</li>
+      </ol>
+      <p class="muted">Once installed, it opens from your Home Screen in its own app window. The core dashboard is cached for offline viewing; live weather and source checks need internet access.</p>
+      <button id="closeInstall2" class="wide-btn" type="button">Got it</button>
+    </div>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
