@@ -1,57 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#07130e">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Gold Cup">
-  <meta name="format-detection" content="telephone=no">
-  <title>Gold Cup Intelligence</title>
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="apple-touch-icon" sizes="180x180" href="./icons/icon-180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-  <header class="app-header">
-    <div class="brand-wrap">
-      <div class="app-mark" aria-hidden="true">GC</div>
-      <div>
-        <div class="eyebrow">CHELTENHAM 2027</div>
-        <h1>Gold Cup Intelligence</h1>
-        <p>Free-source race tracking • Friday 19 March 2027 • 16:00 GMT</p>
-      </div>
-    </div>
-    <div class="header-actions">
-      <button id="install" class="secondary-btn" type="button">Install on iPhone</button>
-      <button id="refresh" type="button">Refresh sources</button>
-    </div>
-  </header>
-
-  <nav id="nav" aria-label="App sections"></nav>
-  <main id="app"></main>
-
-  <footer>Information dashboard only. Odds and terms change; verify with the bookmaker before betting. 18+ • GambleAware.</footer>
-
-  <dialog id="installDialog" class="install-dialog">
-    <div class="install-sheet">
-      <button id="closeInstall" class="close-btn" aria-label="Close install instructions">×</button>
-      <div class="app-mark large" aria-hidden="true">GC</div>
-      <div class="eyebrow">ADD TO IPHONE</div>
-      <h2>Install Gold Cup Intelligence</h2>
-      <ol>
-        <li>Open this app in <strong>Safari</strong>.</li>
-        <li>Tap the <strong>Share</strong> button.</li>
-        <li>Choose <strong>Add to Home Screen</strong>.</li>
-        <li>Turn on <strong>Open as Web App</strong>, then tap <strong>Add</strong>.</li>
-      </ol>
-      <p class="muted">Once installed, it opens from your Home Screen in its own app window. The core dashboard is cached for offline viewing; live weather and source checks need internet access.</p>
-      <button id="closeInstall2" class="wide-btn" type="button">Got it</button>
-    </div>
-  </dialog>
-
-  <script src="./app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07130e"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Gold Cup"><title>Gold Cup Intelligence</title><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"><link rel="apple-touch-icon" href="./icon.svg"><style>
+:root{--bg:#07130e;--card:#10271c;--line:#244a36;--ink:#f6f4ec;--muted:#a9b9af;--gold:#e5c569;--safe:env(safe-area-inset-bottom)}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(#07130e,#0b1d14);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}header{padding:calc(18px + env(safe-area-inset-top)) 16px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(7,19,14,.96);backdrop-filter:blur(12px);z-index:3}.brand{display:flex;gap:12px;align-items:center}.mark{width:48px;height:48px;border-radius:14px;background:var(--gold);color:#102018;display:grid;place-items:center;font-weight:900}h1{font-size:28px;margin:0}.eyebrow{font-size:11px;letter-spacing:.14em;color:var(--gold);font-weight:800}header p{margin:4px 0 0;color:var(--muted);font-size:13px}.install{margin-top:12px;width:100%;background:transparent;color:var(--gold);border:1px solid var(--line);padding:12px;border-radius:12px;font-weight:700}nav{display:flex;overflow:auto;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line);background:#0a1a12;position:sticky;top:98px;z-index:2}nav button{white-space:nowrap;border:1px solid var(--line);background:#10271c;color:var(--ink);padding:10px 12px;border-radius:999px}nav button.active{background:var(--gold);color:#102018}main{padding:14px 14px calc(90px + var(--safe));max-width:980px;margin:auto}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 10px 35px rgba(0,0,0,.14)}.wide{grid-column:1/-1}.label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:800}.kpi{font-size:30px;font-weight:900;margin-top:4px}.muted{color:var(--muted)}h2{margin:6px 0 12px;font-size:22px}table{width:100%;border-collapse:collapse}th,td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}.odds{font-weight:800;color:var(--gold)}.scroll{overflow:auto}.event,.row{padding:12px 0;border-bottom:1px solid var(--line)}.row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#193d2b;color:#ccebd7;font-size:11px}.pill.pending{background:#493918;color:#ffe6a8}.links{display:grid;gap:10px}.links a,.btn{display:block;text-decoration:none;color:var(--ink);background:#153423;border:1px solid var(--line);padding:14px;border-radius:14px}.links small{display:block;color:var(--muted);margin-top:3px}.note{padding:12px;background:#0b1f15;border-left:3px solid var(--gold);border-radius:8px;color:var(--muted)}dialog{border:0;border-radius:22px;background:#10271c;color:var(--ink);max-width:420px;width:90%;padding:22px}dialog::backdrop{background:rgba(0,0,0,.7)}dialog button{width:100%;padding:12px;border:0;border-radius:12px;background:var(--gold);font-weight:800}footer{padding:20px 16px calc(25px + var(--safe));color:var(--muted);font-size:12px;text-align:center}@media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr)}.span2{grid-column:span 2}.wide{grid-column:1/-1}header{padding-left:24px;padding-right:24px}nav{top:102px}.install{width:auto}}
+</style></head><body><header><div class="brand"><div class="mark">GC</div><div><div class="eyebrow">CHELTENHAM 2027</div><h1>Gold Cup Intelligence</h1><p>Friday 19 March 2027 • 16:00 GMT</p></div></div><button class="install" id="install">Install on iPhone</button></header><nav id="nav"></nav><main id="app"></main><footer>Free-access sources only. Odds and terms change; verify with the bookmaker before betting. 18+.</footer><dialog id="dlg"><h2>Install on iPhone</h2><ol><li>Open this page in <b>Safari</b>.</li><li>Tap the <b>Share</b> button.</li><li>Tap <b>Add to Home Screen</b>.</li><li>Turn on <b>Open as Web App</b>, then tap <b>Add</b>.</li></ol><button id="close">Got it</button></dialog><script>
+const R=[["Gaelic Warrior","9/4"],["Jango Baie","10/1"],["Final Demand","16/1"],["Fact To File","20/1"],["Kitzbuhel","25/1"],["Lulamba","25/1"],["Kaid D'Authie","33/1"],["Inothewayurthinkin","33/1"],["Soldier In Milan","33/1"],["Kingland","40/1"],["The Jukebox Man","50/1"],["Jonbon","50/1"],["I Am Maximus","50/1"],["Romeo Coolio","50/1"],["Caldwell Potter","50/1"],["Grey Dawning","50/1"],["Jagwar","66/1"],["Oscars Brother","66/1"],["The Big Westerner","66/1"],["Heart Wood","66/1"],["Banbridge","66/1"],["Spillane's Tower","66/1"],["Now Is The Hour","66/1"],["Salver","66/1"],["Majborough","80/1"],["Meetmebythesea","80/1"],["Western Fold","100/1"],["Wendigo","100/1"],["Koktail Divin","100/1"],["Predators Gold","100/1"],["Haiti Couleurs","100/1"],["Barton Snow","100/1"],["Nick Rockett","100/1"],["Djelo","100/1"],["Regent's Stroll","100/1"],["Grangeclare West","100/1"],["Monty's Star","100/1"],["Sixmilebridge","100/1"],["Firefox","150/1"],["Kappa Jy Pyke","66/1"],["Affordable Fury","100/1"],["Affordale Fury","100/1"],["Brighterdaysahead","100/1"],["Galopin Des Champs","—"]];
+const C=[["21 Nov 2026","Betfair Chase","Haydock"],["26 Dec 2026","King George VI Chase","Kempton"],["28 Dec 2026","Savills Chase","Leopardstown"],["30–31 Jan 2027","Dublin Racing Festival","Leopardstown"],["16 Mar 2027","Cheltenham Festival — Day 1","Cheltenham"],["17 Mar 2027","Cheltenham Festival — Day 2","Cheltenham"],["18 Mar 2027","Cheltenham Festival — Day 3","Cheltenham"],["19 Mar 2027","Boodles Cheltenham Gold Cup — 16:00","Cheltenham"]];
+const N=[["Coral","Advertised for 2027","Current Cheltenham page advertises NRNB","https://www.coral.co.uk/en/sports/big-competition/cheltenham-festival"],["Ladbrokes","Advertised for 2027","Current Cheltenham page advertises NRNB","https://www.ladbrokes.com/en/sports/big-competition/cheltenham-festival"],["bet365","2027 date not confirmed","2026 reference: 3 Feb, 17:00 GMT","https://www.bet365.com/"],["Paddy Power","Track","2027 NRNB start to verify","https://www.paddypower.com/horse-racing?tab=future"],["Betfair Sportsbook","Track","2027 NRNB start to verify","https://www.betfair.com/sport/horse-racing"],["William Hill","Track","2027 NRNB start to verify","https://sports.williamhill.com/betting/en-gb/horse-racing"],["Sky Bet","Track","2027 NRNB start to verify","https://m.skybet.com/horse-racing"],["Betfred","Track","2027 NRNB start to verify","https://www.betfred.com/sports/horse-racing"],["BetVictor","Track","2027 NRNB start to verify","https://www.betvictor.com/en-gb/sports/horse-racing"],["BoyleSports","Track","2027 NRNB start to verify","https://www.boylesports.com/sports/horse-racing"]];
+const S=[["The Jockey Club","Official dates and race details","https://www.thejockeyclub.co.uk/cheltenham-festival/gold-cup-day/"],["At The Races","Ante-post field and prices","https://www.attheraces.com/antepost"],["Sporting Life","Racecards, form and results","https://www.sportinglife.com/racing"],["Racing TV","News, racecards and results","https://www.racingtv.com/"],["Open-Meteo","Free weather forecast API","https://open-meteo.com/"],["BHA","Official racing notices and ratings","https://www.britishhorseracing.com/"]];
+const tabs=["Dashboard","Runners & Odds","Race Calendar","NRNB Tracker","Bookmaker Links","Sources"];let tab=tabs[0];const app=document.querySelector("#app"),nav=document.querySelector("#nav");const pct=o=>{if(o==="—")return"—";let[a,b]=o.split("/").map(Number);return(100*b/(a+b)).toFixed(1)+"%"};const days=Math.ceil((new Date("2027-03-19T12:00:00")-new Date())/86400000);
+function drawNav(){nav.innerHTML=tabs.map(x=>'<button class="'+(x===tab?'active':'')+'">'+x+'</button>').join("");[...nav.children].forEach((b,i)=>b.onclick=()=>{tab=tabs[i];drawNav();render()})}
+function dashboard(){return '<div class="grid"><div class="card"><div class="label">Countdown</div><div class="kpi">'+days+' days</div></div><div class="card"><div class="label">Ante-post field</div><div class="kpi">'+R.length+'</div></div><div class="card span2"><div class="label">Race</div><h2>3m 2½f • 22 fences • Grade 1</h2><div class="muted">Cheltenham — New Course</div></div><div class="card wide"><div class="label">Current market leaders</div><div class="scroll"><table><tr><th>Horse</th><th>Price</th><th>Implied</th></tr>'+R.slice(0,10).map(x=>'<tr><td><b>'+x[0]+'</b></td><td class="odds">'+x[1]+'</td><td>'+pct(x[1])+'</td></tr>').join("")+'</table></div></div><div class="card wide"><div class="label">Weather</div><div id="weather" class="muted">Gold Cup Day is currently outside the forecast window.</div></div></div>'}
+function runners(){return '<div class="card"><div class="label">At The Races snapshot • 30 Sep 2026</div><h2>Runners & ante-post prices</h2><div class="scroll"><table><tr><th>#</th><th>Horse</th><th>Price</th><th>Implied</th></tr>'+R.map((x,i)=>'<tr><td>'+(i+1)+'</td><td><b>'+x[0]+'</b></td><td class="odds">'+x[1]+'</td><td>'+pct(x[1])+'</td></tr>').join("")+'</table></div></div>'}
+function calendar(){return '<div class="card"><div class="label">Road to Cheltenham</div><h2>Race calendar</h2>'+C.map(x=>'<div class="event"><b>'+x[0]+' — '+x[1]+'</b><div class="muted">'+x[2]+'</div></div>').join("")+'</div>'}
+function nrnb(){return '<div class="card"><div class="label">Non-Runner No Bet</div><h2>NRNB tracker</h2><div class="note">Ante-post and NRNB are different. Always verify the exact market terms before placing a bet.</div>'+N.map(x=>'<div class="row"><div><b>'+x[0]+'</b><div class="muted">'+x[2]+'</div></div><div><span class="pill '+(x[1]==="Track"?'pending':'')+'">'+x[1]+'</span><br><a class="btn" target="_blank" rel="noopener" href="'+x[3]+'">Open ↗</a></div></div>').join("")+'</div>'}
+function links(){return '<div class="card"><div class="label">One-tap links</div><h2>Bookmaker links</h2><div class="links">'+N.map(x=>'<a target="_blank" rel="noopener" href="'+x[3]+'"><b>'+x[0]+' ↗</b><small>'+x[1]+'</small></a>').join("")+'<a target="_blank" rel="noopener" href="https://www.oddschecker.com/cheltenham-festival"><b>Oddschecker ↗</b><small>Cross-check prices</small></a><a target="_blank" rel="noopener" href="https://www.gambleaware.org/"><b>GambleAware ↗</b><small>Safer gambling support</small></a></div></div>'}
+function sources(){return '<div class="card"><div class="label">Free-access only</div><h2>Sources</h2>'+S.map(x=>'<div class="row"><div><b>'+x[0]+'</b><div class="muted">'+x[1]+'</div></div><a class="btn" target="_blank" rel="noopener" href="'+x[2]+'">Open ↗</a></div>').join("")+'</div>'}
+function render(){app.innerHTML=tab==="Dashboard"?dashboard():tab==="Runners & Odds"?runners():tab==="Race Calendar"?calendar():tab==="NRNB Tracker"?nrnb():tab==="Bookmaker Links"?links():sources()}
+drawNav();render();const dlg=document.querySelector("#dlg");document.querySelector("#install").onclick=()=>dlg.showModal();document.querySelector("#close").onclick=()=>dlg.close();if("serviceWorker"in navigator)navigator.serviceWorker.register("./sw.js").catch(()=>{});
+</script></body></html>
